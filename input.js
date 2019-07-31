@@ -23,6 +23,8 @@ const handleUserInput = function(key) {
     return connection.write("Move: right");
   case "a":
     return connection.write("Move: left");
+  case "l":
+    return connection.write("Say: GOTCHA!!");
   }
 };
 
