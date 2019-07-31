@@ -14,8 +14,24 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("You've succesfully connected!");
-    conn.write('Name: AZ');
+    conn.write('Name: AZ', () => {
+      // conn.write('Move: up');
+      // let i = 0;
+      // while(i < 10) {
+      //   setTimeout(() => {
+      //     conn.write('Move: left');
+      //   },50 + i);
+      // i++;  
+      // }
+    });
+    
+    // conn.write('Move: down');
+    // conn.write('Move: right');
   });
+  
+
+
+
   
   return conn;
 };
