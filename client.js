@@ -10,7 +10,12 @@ const connect = function() {
    
   conn.on('data', (data) => {
     console.log(`Server says: ${data}`);
-  })
+  });
+
+  conn.on('connect', () => {
+    console.log("You've succesfully connected!");
+    conn.write('Name: AZ');
+  });
   
   return conn;
 };
